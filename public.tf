@@ -25,3 +25,13 @@ resource "aws_subnet" "eks_subnet_public_sa-east-1b" {
     }
   )
 }
+
+resource "aws_route_table_association" "eks_rtb_assoc_sa-east-1a" {
+  subnet_id      = aws_subnet.eks_subnet_public_sa-east-1a.id
+  route_table_id = aws_route_table.eks_public_rt.id
+}
+
+resource "aws_route_table_association" "eks_rtb_assoc_sa-east-1b" {
+  subnet_id      = aws_subnet.eks_subnet_public_sa-east-1b.id
+  route_table_id = aws_route_table.eks_public_rt.id
+}
