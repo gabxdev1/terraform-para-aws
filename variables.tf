@@ -3,3 +3,4 @@ variable "cidr_block" {
   nullable = false
   description = "Networking CIDR block to be used for the VPC."
 }
+
