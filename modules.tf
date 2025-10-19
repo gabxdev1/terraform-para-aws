@@ -6,12 +6,12 @@ module "eks_network" {
 }
 
 module "eks_cluster" {
-  source                     = "./modules/cluster"
-  project_name               = var.project_name
-  tags                       = var.tags
-  public_subnet_sa-east-1a   = module.eks_network.subnet_pub_sa-east-1a_id
-  public_subnet_sa-east-1b   = module.eks_network.subnet_pub_sa-east-1b_id
-  arn_developer_access_local = var.arn_developer_access_local
+  source                   = "./modules/cluster"
+  project_name             = var.project_name
+  tags                     = var.tags
+  public_subnet_sa-east-1a = module.eks_network.subnet_pub_sa-east-1a_id
+  public_subnet_sa-east-1b = module.eks_network.subnet_pub_sa-east-1b_id
+  depends_on               = [module.eks_network]
 }
 
 module "eks_managed_node_group" {
@@ -23,7 +23,7 @@ module "eks_managed_node_group" {
   cluster_Name           = module.eks_cluster.eks_cluster_name
   instance_type          = var.instance_type
   scaling_config         = var.scaling_config
-
+  depends_on             = [module.eks_cluster]
 }
 
 module "eks_load_balancer_controller" {
@@ -33,4 +33,5 @@ module "eks_load_balancer_controller" {
   oidc_issuer  = module.eks_cluster.oidc
   cluster_name = module.eks_cluster.eks_cluster_name
   vpc_id       = module.eks_network.vpc_id
+  depends_on   = [module.eks_managed_node_group]
 }
