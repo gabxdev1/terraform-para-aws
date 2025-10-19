@@ -27,3 +27,22 @@ output "eks_cluster_oidc" {
   description = "EKS Cluster OIDC TLS Certificate"
   value       = module.eks_cluster.eks_oidc_tls_cert
 }
+
+output "oidc" {
+  value = module.eks_cluster.oidc
+}
+
+output "cluster_name" {
+  value = module.eks_cluster.eks_cluster_name
+  description = "EKS Cluster Name"
+}
+
+output "cluster_endpoint" {
+  value = module.eks_cluster.cluster_endpoint
+  description = "EKS Cluster Endpoint"
+}
+
+output "cluster_ca_certificate" {
+  value = module.eks_cluster.cluster_ca_certificate
+    description = "EKS Cluster CA Certificate"
+}

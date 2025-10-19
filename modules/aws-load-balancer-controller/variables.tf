@@ -8,3 +8,9 @@ variable "tags" {
   type        = map(string)
   description = "A map of tags to assign to the resources."
 }
+
+variable "oidc_issuer" {
+  type        = string
+  description = "The OIDC issuer URL for the EKS cluster."
+  nullable    = false
+}

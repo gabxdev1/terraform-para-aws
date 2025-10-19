@@ -9,3 +9,16 @@ output "eks_oidc_tls_cert" {
 output "eks_cluster_name" {
   value = aws_eks_cluster.eks_cluster.id
 }
+
+output "cluster_endpoint" {
+  value = aws_eks_cluster.eks_cluster.endpoint
+}
+
+output "cluster_ca_certificate" {
+  value = aws_eks_cluster.eks_cluster.certificate_authority[0].data
+}
+
+
+output "oidc" {
+  value = aws_eks_cluster.eks_cluster.identity[0].oidc[0].issuer
+}
