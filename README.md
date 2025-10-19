@@ -15,10 +15,10 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_eks_cluster"></a> [eks\_cluster](#module\_eks\_cluster) | ./modules/cluster | 1.0.0 |
-| <a name="module_eks_load_balancer_controller"></a> [eks\_load\_balancer\_controller](#module\_eks\_load\_balancer\_controller) | ./modules/aws-load-balancer-controller | 1.0.0 |
-| <a name="module_eks_managed_node_group"></a> [eks\_managed\_node\_group](#module\_eks\_managed\_node\_group) | ./modules/managed-node-group | 1.0.0 |
-| <a name="module_eks_network"></a> [eks\_network](#module\_eks\_network) | ./modules/network | 1.0.0 |
+| <a name="module_eks_cluster"></a> [eks\_cluster](#module\_eks\_cluster) | ./modules/cluster | n/a |
+| <a name="module_eks_load_balancer_controller"></a> [eks\_load\_balancer\_controller](#module\_eks\_load\_balancer\_controller) | ./modules/aws-load-balancer-controller | n/a |
+| <a name="module_eks_managed_node_group"></a> [eks\_managed\_node\_group](#module\_eks\_managed\_node\_group) | ./modules/managed-node-group | n/a |
+| <a name="module_eks_network"></a> [eks\_network](#module\_eks\_network) | ./modules/network | n/a |
 
 ## Resources
 
@@ -34,6 +34,7 @@ No resources.
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Project name to be used in resource names and tags. | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | AWS region to deploy the resources in. | `string` | n/a | yes |
 | <a name="input_scaling_config"></a> [scaling\_config](#input\_scaling\_config) | Configuração de escalonamento do Node Group (desired, min, max). | <pre>object({<br/>    desired_size = number<br/>    min_size     = number<br/>    max_size     = number<br/>  })</pre> | <pre>{<br/>  "desired_size": 1,<br/>  "max_size": 1,<br/>  "min_size": 1<br/>}</pre> | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to add to all resources. | `map(string)` | `{}` | no |
 
 ## Outputs
 
