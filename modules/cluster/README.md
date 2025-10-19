@@ -18,8 +18,6 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [aws_eks_access_entry.developer_access](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_access_entry) | resource |
-| [aws_eks_access_policy_association.admin_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_access_policy_association) | resource |
 | [aws_eks_cluster.eks_cluster](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_cluster) | resource |
 | [aws_iam_openid_connect_provider.eks_oidc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_openid_connect_provider) | resource |
 | [aws_iam_role.eks_cluster_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
@@ -31,7 +29,6 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_arn_developer_access_local"></a> [arn\_developer\_access\_local](#input\_arn\_developer\_access\_local) | The ARN of the IAM user or role to be granted developer access to the EKS cluster. | `string` | n/a | yes |
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Project name to be used in resource names and tags. | `string` | n/a | yes |
 | <a name="input_public_subnet_sa-east-1a"></a> [public\_subnet\_sa-east-1a](#input\_public\_subnet\_sa-east-1a) | The ID of the public subnet in sa-east-1a region. | `string` | n/a | yes |
 | <a name="input_public_subnet_sa-east-1b"></a> [public\_subnet\_sa-east-1b](#input\_public\_subnet\_sa-east-1b) | The ID of the public subnet in sa-east-1b region. | `string` | n/a | yes |
