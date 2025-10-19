@@ -22,8 +22,8 @@ terraform {
 }
 
 provider "aws" {
-  region  = "sa-east-1"
-  profile = "automacao-curso"
+  region  = var.region
+  profile = var.profile
 }
 
 provider "kubernetes" {

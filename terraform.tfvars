@@ -1,2 +1,5 @@
-cidr_block   = "10.0.0.0/16"
-project_name = "eksdevelopment"
+cidr_block    = "10.0.0.0/16"
+project_name  = "eksdevelopment"
+instance_type = "c7i-flex.large"
+profile       = "automacao-curso"
+region        = "sa-east-1"

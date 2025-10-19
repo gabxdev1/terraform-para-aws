@@ -20,13 +20,15 @@ module "eks_managed_node_group" {
   subnet-priv-sa-east-1a = module.eks_network.subnet_priv_sa-east-1a_id
   subnet-priv-sa-east-1b = module.eks_network.subnet_priv_sa-east-1b_id
   cluster_Name           = module.eks_cluster.eks_cluster_name
+  instance_type          = var.instance_type
+  scaling_config         = var.scaling_config
 }
 
 module "eks_load_balancer_controller" {
   source       = "./modules/aws-load-balancer-controller"
   project_name = var.project_name
   tags         = local.tags
-  oidc_issuer = module.eks_cluster.oidc
+  oidc_issuer  = module.eks_cluster.oidc
   cluster_name = module.eks_cluster.eks_cluster_name
-  vpc_id = module.eks_network.vpc_id
+  vpc_id       = module.eks_network.vpc_id
 }

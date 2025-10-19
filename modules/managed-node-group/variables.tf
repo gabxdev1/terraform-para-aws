@@ -26,3 +26,18 @@ variable "subnet-priv-sa-east-1b" {
   description = "The ID of the private subnet in sa-east-1b for the managed node group."
   nullable    = false
 }
+
+variable "instance_type" {
+  type        = string
+  nullable    = false
+  description = "EC2 instance type for the EKS managed node group."
+}
+
+variable "scaling_config" {
+  description = "Configuração de escalonamento do Node Group (desired, min, max)."
+  type = object({
+    desired_size = number
+    min_size     = number
+    max_size     = number
+  })
+}
