@@ -46,9 +46,3 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
-
-variable "arn_developer_access_local" {
-  type        = string
-  nullable    = false
-  description = "The ARN of the IAM user or role to be granted developer access to the EKS cluster."
-}

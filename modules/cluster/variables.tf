@@ -21,9 +21,3 @@ variable "public_subnet_sa-east-1b" {
   description = "The ID of the public subnet in sa-east-1b region."
 }
 
-variable "arn_developer_access_local" {
-  type        = string
-  nullable    = false
-  description = "The ARN of the IAM user or role to be granted developer access to the EKS cluster."
-}
-
