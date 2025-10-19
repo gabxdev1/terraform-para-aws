@@ -16,8 +16,8 @@ variable "tags" {
 }
 
 variable "subnet-priv-sa-east-1a" {
-    type        = string
-    description = "The ID of the private subnet in sa-east-1a for the managed node group."
+  type        = string
+  description = "The ID of the private subnet in sa-east-1a for the managed node group."
   nullable    = false
 }
 

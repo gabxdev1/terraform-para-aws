@@ -21,3 +21,9 @@ module "eks_managed_node_group" {
   subnet-priv-sa-east-1b = module.eks_network.subnet_priv_sa-east-1b_id
   cluster_Name           = module.eks_cluster.eks_cluster_name
 }
+
+module "eks_load_balancer_controller" {
+  source       = "./modules/aws-load-balancer-controller"
+  project_name = var.project_name
+  tags         = local.tags
+}
