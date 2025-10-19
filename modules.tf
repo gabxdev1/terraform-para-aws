@@ -6,11 +6,12 @@ module "eks_network" {
 }
 
 module "eks_cluster" {
-  source                   = "./modules/cluster"
-  project_name             = var.project_name
-  tags                     = var.tags
-  public_subnet_sa-east-1a = module.eks_network.subnet_pub_sa-east-1a_id
-  public_subnet_sa-east-1b = module.eks_network.subnet_pub_sa-east-1b_id
+  source                     = "./modules/cluster"
+  project_name               = var.project_name
+  tags                       = var.tags
+  public_subnet_sa-east-1a   = module.eks_network.subnet_pub_sa-east-1a_id
+  public_subnet_sa-east-1b   = module.eks_network.subnet_pub_sa-east-1b_id
+  arn_developer_access_local = var.arn_developer_access_local
 }
 
 module "eks_managed_node_group" {

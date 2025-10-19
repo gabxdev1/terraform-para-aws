@@ -31,7 +31,7 @@ resource "aws_eks_cluster" "eks_cluster" {
 
 resource "aws_eks_access_entry" "developer_access" {
   cluster_name  = aws_eks_cluster.eks_cluster.name
-  principal_arn = "arn:aws:iam::758346258701:user/aws-cdk-2"
+  principal_arn = var.arn_developer_access_local
   type          = "STANDARD"
 }
 
