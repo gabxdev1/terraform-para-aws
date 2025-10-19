@@ -28,6 +28,7 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_arn_developer_access_local"></a> [arn\_developer\_access\_local](#input\_arn\_developer\_access\_local) | The ARN of the IAM user or role to be granted developer access to the EKS cluster. | `string` | n/a | yes |
 | <a name="input_cidr_block"></a> [cidr\_block](#input\_cidr\_block) | Networking CIDR block to be used for the VPC. | `string` | n/a | yes |
 | <a name="input_instance_type"></a> [instance\_type](#input\_instance\_type) | EC2 instance type for the EKS managed node group. | `string` | n/a | yes |
 | <a name="input_profile"></a> [profile](#input\_profile) | AWS CLI profile to be used for deploying resources. | `string` | `"default"` | no |
