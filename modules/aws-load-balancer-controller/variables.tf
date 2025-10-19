@@ -14,3 +14,15 @@ variable "oidc_issuer" {
   description = "The OIDC issuer URL for the EKS cluster."
   nullable    = false
 }
+
+variable "cluster_name" {
+  type        = string
+  description = "The name of the EKS cluster."
+  nullable    = false
+}
+
+variable "vpc_id" {
+  type        = string
+  description = "The ID of the VPC where the EKS cluster is deployed."
+  nullable    = false
+}

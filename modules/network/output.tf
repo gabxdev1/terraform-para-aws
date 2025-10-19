@@ -13,3 +13,7 @@ output "subnet_priv_sa-east-1a_id" {
 output "subnet_priv_sa-east-1b_id" {
   value = aws_subnet.eks_subnet_priv_sa-east-1b.id
 }
+
+output "vpc_id" {
+  value = aws_vpc.eks-vpc.id
+}
