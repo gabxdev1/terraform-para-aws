@@ -13,12 +13,6 @@ terraform {
       version = "3.0.2"
     }
   }
-
-  backend "s3" {
-    bucket = "comunidadedevops-gab"
-    key    = "dev/terraform.tfstate"
-    region = "sa-east-1"
-  }
 }
 
 provider "aws" {
